@@ -25,7 +25,14 @@ export default {
   collectCoverageFrom: ["lib/**/*.ts", "!lib/**/*.d.ts", "!lib/**/index.ts"],
   coverageDirectory: "coverage",
   coverageReporters: ["text", "lcov", "html"],
-  transformIgnorePatterns: ["node_modules/(?!(@open-wc|lit|@lit)/)"],
+  transformIgnorePatterns: [
+    "node_modules/(?!(lit|@lit|@esm-bundle|jest-axe)/)",
+  ],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   extensionsToTreatAsEsm: [],
+  globals: {
+    "ts-jest": {
+      useESM: false,
+    },
+  },
 };
