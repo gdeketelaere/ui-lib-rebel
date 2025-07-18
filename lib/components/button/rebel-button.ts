@@ -1,7 +1,7 @@
 import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import style from "./rebel-button.scss?inline";
-import { TailwindElement } from "../../shared/tailwindMixin";
+import { TailwindElement } from "../../utils/tailwindElement";
 
 export interface RebelButtonProps {
   variant?: "primary" | "secondary" | "outline" | "ghost";
