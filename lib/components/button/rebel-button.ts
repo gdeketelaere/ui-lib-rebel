@@ -1,7 +1,8 @@
-import { LitElement, html, css } from "lit";
+import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
-import { TW } from "../../shared/tailwindMixin";
-const TwLitElement = TW(LitElement);
+import style from "./rebel-button.scss?inline";
+import { TailwindElement } from "../../shared/tailwindMixin";
+
 export interface RebelButtonProps {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "small" | "medium" | "large";
@@ -11,7 +12,7 @@ export interface RebelButtonProps {
 }
 
 @customElement("rebel-button")
-export class RebelButton extends TwLitElement {
+export class RebelButton extends TailwindElement(style) {
   @property({ type: String })
   variant: RebelButtonProps["variant"] = "primary";
 
@@ -26,128 +27,6 @@ export class RebelButton extends TwLitElement {
 
   @property({ type: String })
   type: RebelButtonProps["type"] = "button";
-
-  static styles = css`
-    :host {
-      display: block;
-    }
-
-    /* Vous pouvez utiliser des classes Tailwind ici */
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      border: 1px solid var(--color-border);
-      border-radius: var(--_radius);
-      font-family: inherit;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      text-decoration: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Exemple avec des styles Tailwind-like */
-    .button--primary {
-      background-color: var(--color-primary);
-      color: var(--color-primary-foreground);
-    }
-
-    .button--primary:hover:not(:disabled) {
-      background-color: var(
-        --bg-primary-600
-      ); /* Utilise primary-600 du config */
-      color: var(--color-primary-foreground);
-    }
-
-    .button--secondary {
-      background-color: var(--color-secondary);
-      color: var(--color-secondary-foreground);
-    }
-
-    .button--secondary:hover:not(:disabled) {
-      background-color: var(--color-secondary);
-      opacity: 0.9;
-    }
-
-    .button--outline {
-      background-color: transparent;
-      color: var(--color-primary);
-      border: 1px solid var(--color-primary);
-    }
-
-    .button--outline:hover:not(:disabled) {
-      background-color: var(--bg-primary-50); /* Utilise primary-50 du config */
-      color: var(--bg-primary-900); /* Utilise primary-900 du config */
-    }
-
-    .button--ghost {
-      background-color: transparent;
-      color: var(--color-foreground);
-    }
-
-    .button--ghost:hover:not(:disabled) {
-      background-color: var(
-        --bg-primary-100
-      ); /* Utilise primary-100 du config */
-      color: var(--bg-primary-900); /* Utilise primary-900 du config */
-    }
-
-    .button:focus-visible {
-      outline: 2px solid var(--color-ring);
-      outline-offset: 2px;
-    }
-
-    .button:disabled {
-      cursor: not-allowed;
-      opacity: 0.6;
-    }
-
-    /* Sizes */
-    .button--small {
-      padding: 0.5rem 1rem;
-      font-size: 0.875rem;
-      min-height: 2rem;
-    }
-
-    .button--medium {
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      min-height: 2.5rem;
-    }
-
-    .button--large {
-      padding: 1rem 2rem;
-      font-size: 1.125rem;
-      min-height: 3rem;
-    }
-
-    /* Loading state */
-    .button--loading {
-      pointer-events: none;
-    }
-
-    .spinner {
-      width: 1em;
-      height: 1em;
-      border: 2px solid currentColor;
-      border-bottom-color: transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .button--loading .spinner {
-      opacity: 1;
-    }
-  `;
 
   render() {
     const buttonClasses = [
