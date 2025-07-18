@@ -1,8 +1,6 @@
-// Configuration Axe pour les tests d'accessibilité WCAG AA
 export const axeConfig = {
-  // Règles WCAG AA
   rules: {
-    // Niveau A
+    // Level A
     "color-contrast": { enabled: true },
     "document-title": { enabled: true },
     "html-has-lang": { enabled: true },
@@ -12,7 +10,7 @@ export const axeConfig = {
     region: { enabled: true },
     "skip-link": { enabled: true },
 
-    // Niveau AA
+    // Level AA
     "color-contrast-enhanced": { enabled: true },
     "focus-order-semantics": { enabled: true },
     "heading-order": { enabled: true },
@@ -31,7 +29,7 @@ export const axeConfig = {
     "th-has-data-cells": { enabled: true },
     "valid-lang": { enabled: true },
 
-    // Règles supplémentaires pour les composants web
+    //Others
     "button-name": { enabled: true },
     "input-button-name": { enabled: true },
     "link-name": { enabled: true },
@@ -94,13 +92,10 @@ export const axeConfig = {
     "video-description": { enabled: true },
   },
 
-  // Tags pour WCAG AA
   tags: ["wcag2a", "wcag2aa"],
 
-  // Niveau de violation
   reporter: "v2",
 
-  // Options de test
   runOnly: {
     type: "tag",
     values: ["wcag2a", "wcag2aa"],
