@@ -1,6 +1,6 @@
 # UI Lib Rebel
 
-Une librairie de composants UI basée sur [Lit](https://lit.dev/) avec support de Tailwind CSS.
+A UI component library based on [Lit](https://lit.dev/) with Tailwind CSS support.
 
 ## 🚀 Installation
 
@@ -8,40 +8,40 @@ Une librairie de composants UI basée sur [Lit](https://lit.dev/) avec support d
 pnpm install
 ```
 
-## 🛠️ Développement
+## 🛠️ Development
 
 ```bash
-# Démarrer le serveur de développement
+# Start development server
 pnpm dev
 
-# Construire le projet
+# Build the project
 pnpm build
 ```
 
-## 📦 Utilisation
+## 📦 Usage
 
-Les composants sont disponibles dans `src/components/` et peuvent être utilisés dans vos projets web.
+Components are available in `src/components/` and can be used in your web projects.
 
-### Exemple
+### Example
 
 ```html
 <script type="module" src="/src/components/button/rebel-button.ts"></script>
-<rebel-button>Cliquez-moi</rebel-button>
+<rebel-button>Click me</rebel-button>
 ```
 
 ## 🎨 Technologies
 
-- **Lit** - Framework pour composants web
-- **Tailwind CSS** - Framework CSS utilitaire
-- **Vite** - Outil de build et serveur de développement
-- **TypeScript** - Support TypeScript complet
+- **Lit** - Web component framework
+- **Tailwind CSS** - Utility CSS framework
+- **Vite** - Build tool and development server
+- **TypeScript** - Full TypeScript support
 
 ## 📁 Structure
 
 ```
 src/
-├── components/     # Composants UI
-├── index.ts       # Exports principaux
+├── components/     # UI Components
+├── index.ts       # Main exports
 └── test/          # Tests
 ```
 
