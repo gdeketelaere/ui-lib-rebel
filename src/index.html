@@ -1,140 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/rebel.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebel UI Components</title>
+    <link rel="stylesheet" href="/src/index.css" />
+    <script type="module" src="/lib/main.ts"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/rebel.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rebel UI Components</title>
-  <link rel="stylesheet" href="/src/index.css" />
-  <script type="module" src="/lib/main.ts"></script>
+  <body>
+    <div class="container">
+      <h2 class="text-sm">Lit + Tailwind</h2>
+      <h1 class="text-5xl font-bold pb-4">Rebel UI Components</h1>
+      <!-- Section Rebel Button -->
+      <div class="section">
+        <h2 class="font-bold text-4xl py-4">Rebel Button</h2>
 
-</head>
-
-<body>
-  <div class="container">
-    <h2 class="text-sm">Lit + Tailwind</h2>
-    <h1 class="text-5xl font-bold pb-4">Rebel UI Components</h1>
-    <!-- Section Rebel Button -->
-    <div class="section">
-      <h2 class="font-bold text-4xl py-4">Rebel Button</h2>
-
-      <div class="demo-grid">
-        <!-- Variantes -->
-        <div class="demo-item">
-          <h3>Variantes</h3>
-          <div class="demo-row">
-            <span class="demo-label">Primary:</span>
-            <rebel-button variant="primary">Bouton Primary</rebel-button>
+        <div class="demo-grid">
+          <!-- Variantes -->
+          <div class="demo-item">
+            <h3>Variantes</h3>
+            <div class="demo-row">
+              <span class="demo-label">Primary:</span>
+              <rebel-button variant="primary">Bouton Primary</rebel-button>
+            </div>
+            <div class="demo-row">
+              <span class="demo-label">Secondary:</span>
+              <rebel-button variant="secondary">Bouton Secondary</rebel-button>
+            </div>
+            <div class="demo-row">
+              <span class="demo-label">Outline:</span>
+              <rebel-button variant="outline">Bouton Outline</rebel-button>
+            </div>
+            <div class="demo-row">
+              <span class="demo-label">Ghost:</span>
+              <rebel-button variant="ghost">Bouton Ghost</rebel-button>
+            </div>
           </div>
-          <div class="demo-row">
-            <span class="demo-label">Secondary:</span>
-            <rebel-button variant="secondary">Bouton Secondary</rebel-button>
+
+          <!-- Tailles -->
+          <div class="demo-item">
+            <h3>Tailles</h3>
+            <div class="demo-row">
+              <span class="demo-label">Small:</span>
+              <rebel-button size="small">Petit</rebel-button>
+            </div>
+            <div class="demo-row">
+              <span class="demo-label">Medium:</span>
+              <rebel-button size="medium">Moyen</rebel-button>
+            </div>
+            <div class="demo-row">
+              <span class="demo-label">Large:</span>
+              <rebel-button size="large">Grand</rebel-button>
+            </div>
           </div>
-          <div class="demo-row">
-            <span class="demo-label">Outline:</span>
-            <rebel-button variant="outline">Bouton Outline</rebel-button>
-          </div>
-          <div class="demo-row">
-            <span class="demo-label">Ghost:</span>
-            <rebel-button variant="ghost">Bouton Ghost</rebel-button>
+
+          <!-- États -->
+          <div class="demo-item">
+            <h3>États</h3>
+            <div class="demo-row">
+              <span class="demo-label">Normal:</span>
+              <rebel-button>Normal</rebel-button>
+            </div>
+            <div class="demo-row">
+              <span class="demo-label">Disabled:</span>
+              <rebel-button disabled>Désactivé</rebel-button>
+            </div>
+            <div class="demo-row">
+              <span class="demo-label">Loading:</span>
+              <rebel-button loading>Chargement</rebel-button>
+            </div>
           </div>
         </div>
+      </div>
 
-        <!-- Tailles -->
-        <div class="demo-item">
-          <h3>Tailles</h3>
-          <div class="demo-row">
-            <span class="demo-label">Small:</span>
-            <rebel-button size="small">Petit</rebel-button>
-          </div>
-          <div class="demo-row">
-            <span class="demo-label">Medium:</span>
-            <rebel-button size="medium">Moyen</rebel-button>
-          </div>
-          <div class="demo-row">
-            <span class="demo-label">Large:</span>
-            <rebel-button size="large">Grand</rebel-button>
-          </div>
-        </div>
+      <!-- Section Rebel Input -->
+      <div class="section">
+        <h2 class="font-bold text-4xl py-4">Rebel Input</h2>
 
-        <!-- États -->
-        <div class="demo-item">
-          <h3>États</h3>
-          <div class="demo-row">
-            <span class="demo-label">Normal:</span>
-            <rebel-button>Normal</rebel-button>
+        <div class="demo-grid">
+          <!-- Types d'input -->
+          <div class="demo-item">
+            <h3>Types d'Input</h3>
+            <div class="form-group">
+              <rebel-input
+                type="text"
+                placeholder="Texte simple"
+                label="Champ texte"
+              ></rebel-input>
+            </div>
+            <div class="form-group">
+              <rebel-input
+                type="email"
+                placeholder="exemple@email.com"
+                label="Email"
+              ></rebel-input>
+            </div>
+            <div class="form-group">
+              <rebel-input
+                type="password"
+                placeholder="Mot de passe"
+                label="Mot de passe"
+              ></rebel-input>
+            </div>
+            <div class="form-group">
+              <rebel-input
+                type="number"
+                placeholder="123"
+                label="Nombre"
+              ></rebel-input>
+            </div>
           </div>
-          <div class="demo-row">
-            <span class="demo-label">Disabled:</span>
-            <rebel-button disabled>Désactivé</rebel-button>
+
+          <!-- Tailles -->
+          <div class="demo-item">
+            <h3>Tailles</h3>
+            <div class="form-group">
+              <rebel-input
+                size="small"
+                placeholder="Petit input"
+                label="Small"
+              ></rebel-input>
+            </div>
+            <div class="form-group">
+              <rebel-input
+                size="medium"
+                placeholder="Input moyen"
+                label="Medium"
+              ></rebel-input>
+            </div>
+            <div class="form-group">
+              <rebel-input
+                size="large"
+                placeholder="Grand input"
+                label="Large"
+              ></rebel-input>
+            </div>
           </div>
-          <div class="demo-row">
-            <span class="demo-label">Loading:</span>
-            <rebel-button loading>Chargement</rebel-button>
+
+          <!-- États -->
+          <div class="demo-item">
+            <h3>États</h3>
+            <div class="form-group">
+              <rebel-input
+                variant="default"
+                placeholder="Normal"
+                label="Normal"
+              ></rebel-input>
+            </div>
+            <div class="form-group">
+              <rebel-input
+                variant="error"
+                placeholder="Erreur"
+                label="Erreur"
+                error-text="Ce champ est requis"
+              ></rebel-input>
+            </div>
+            <div class="form-group">
+              <rebel-input
+                variant="success"
+                placeholder="Succès"
+                label="Succès"
+                helper-text="Champ valide"
+              ></rebel-input>
+            </div>
+            <div class="form-group">
+              <rebel-input
+                disabled
+                placeholder="Désactivé"
+                label="Désactivé"
+              ></rebel-input>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Section Rebel Input -->
-    <div class="section">
-      <h2 class="font-bold text-4xl py-4">Rebel Input</h2>
-
-      <div class="demo-grid">
-        <!-- Types d'input -->
-        <div class="demo-item">
-          <h3>Types d'Input</h3>
-          <div class="form-group">
-            <rebel-input type="text" placeholder="Texte simple" label="Champ texte"></rebel-input>
-          </div>
-          <div class="form-group">
-            <rebel-input type="email" placeholder="exemple@email.com" label="Email"></rebel-input>
-          </div>
-          <div class="form-group">
-            <rebel-input type="password" placeholder="Mot de passe" label="Mot de passe"></rebel-input>
-          </div>
-          <div class="form-group">
-            <rebel-input type="number" placeholder="123" label="Nombre"></rebel-input>
-          </div>
-        </div>
-
-        <!-- Tailles -->
-        <div class="demo-item">
-          <h3>Tailles</h3>
-          <div class="form-group">
-            <rebel-input size="small" placeholder="Petit input" label="Small"></rebel-input>
-          </div>
-          <div class="form-group">
-            <rebel-input size="medium" placeholder="Input moyen" label="Medium"></rebel-input>
-          </div>
-          <div class="form-group">
-            <rebel-input size="large" placeholder="Grand input" label="Large"></rebel-input>
-          </div>
-        </div>
-
-        <!-- États -->
-        <div class="demo-item">
-          <h3>États</h3>
-          <div class="form-group">
-            <rebel-input variant="default" placeholder="Normal" label="Normal"></rebel-input>
-          </div>
-          <div class="form-group">
-            <rebel-input variant="error" placeholder="Erreur" label="Erreur"
-              error-text="Ce champ est requis"></rebel-input>
-          </div>
-          <div class="form-group">
-            <rebel-input variant="success" placeholder="Succès" label="Succès" helper-text="Champ valide"></rebel-input>
-          </div>
-          <div class="form-group">
-            <rebel-input disabled placeholder="Désactivé" label="Désactivé"></rebel-input>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-</body>
-
+  </body>
 </html>

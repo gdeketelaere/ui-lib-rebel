@@ -130,10 +130,12 @@ export class RebelInput extends TailwindElement(style) {
               <div class="error-text" id="helper-text">${this.errorText}</div>
             `
           : this.helperText
-          ? html`
-              <div class="helper-text" id="helper-text">${this.helperText}</div>
-            `
-          : ""}
+            ? html`
+                <div class="helper-text" id="helper-text">
+                  ${this.helperText}
+                </div>
+              `
+            : ""}
       </div>
     `;
   }

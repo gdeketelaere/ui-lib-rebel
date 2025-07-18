@@ -7,7 +7,7 @@ describe("RebelButton Test", () => {
   beforeEach(async () => {
     element = document.createElement("rebel-button") as RebelButton;
     document.body.appendChild(element);
-    await new Promise((resolve) => setTimeout(resolve, 0));
+    await new Promise(resolve => setTimeout(resolve, 0));
   });
 
   afterEach(() => {

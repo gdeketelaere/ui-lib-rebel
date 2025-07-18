@@ -1,7 +1,7 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
-  extends: ["eslint:recommended", "@typescript-eslint/recommended"],
-  plugins: ["@typescript-eslint"],
+  extends: ["eslint:recommended", "@typescript-eslint/recommended", "prettier"],
+  plugins: ["@typescript-eslint", "prettier"],
   env: {
     browser: true,
     es2020: true,
@@ -17,6 +17,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "warn",
+    "prettier/prettier": "error",
   },
   ignorePatterns: ["dist/", "node_modules/", "coverage/"],
 };
