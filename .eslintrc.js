@@ -1,6 +1,11 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
-  extends: ["eslint:recommended", "@typescript-eslint/recommended", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "@typescript-eslint/recommended",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
   plugins: ["@typescript-eslint", "prettier"],
   env: {
     browser: true,
