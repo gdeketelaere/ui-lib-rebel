@@ -12,5 +12,26 @@ const config: StorybookConfig = {
     name: "@storybook/web-components-vite",
     options: {},
   },
+  viteFinal: async config => {
+    // Configuration pour utiliser la nouvelle API Sass
+    if (config.css?.preprocessorOptions?.scss) {
+      config.css.preprocessorOptions.scss = {
+        ...config.css.preprocessorOptions.scss,
+        api: "modern-compiler",
+      };
+    } else {
+      config.css = {
+        ...config.css,
+        preprocessorOptions: {
+          ...config.css?.preprocessorOptions,
+          scss: {
+            api: "modern-compiler",
+          },
+        },
+      };
+    }
+
+    return config;
+  },
 };
 export default config;

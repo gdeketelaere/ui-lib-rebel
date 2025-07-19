@@ -21,6 +21,13 @@ export default defineConfig({
       rollupTypes: true,
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: "modern-compiler",
+      },
+    },
+  },
   build: {
     copyPublicDir: false,
     lib: {
