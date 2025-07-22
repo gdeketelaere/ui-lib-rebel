@@ -34,9 +34,4 @@ export default {
   ],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
   extensionsToTreatAsEsm: [],
-  globals: {
-    "ts-jest": {
-      useESM: false,
-    },
-  },
 };

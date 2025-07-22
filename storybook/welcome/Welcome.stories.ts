@@ -13,6 +13,7 @@ const meta: Meta = {
     panel: {
       hidden: true,
     },
+
     docs: {
       description: {
         component: `
@@ -34,24 +35,8 @@ Rebel Design System is a collection of web components built with modern web stan
   decorators: [
     story => html`
       <style>
-        /* Cache complètement le panel Storybook */
-        .sb-show-main {
-          background: white !important;
-        }
-        [data-is-storybook="true"] .sb-show-main {
-          background: white !important;
-        }
-        /* Cache la toolbar et les panels */
-        .sb-show-main .sb-main-padded {
-          padding: 0 !important;
-        }
-        /* Cache les contrôles */
-        .sb-show-main .sb-controls {
-          display: none !important;
-        }
-        /* Cache le panel de navigation */
-        .sb-show-main .sb-panel {
-          display: none !important;
+        #storybook-panel-root {
+          display: none;
         }
       </style>
       ${story()}

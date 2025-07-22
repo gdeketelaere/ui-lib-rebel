@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { html } from "lit";
-
-// Import the component
 import "../../ui-lib/components/input/rebel-input";
 
 const meta: Meta = {
@@ -15,6 +13,7 @@ const meta: Meta = {
       },
     },
   },
+  tags: ["autodocs"],
   argTypes: {
     type: {
       control: { type: "select" },
