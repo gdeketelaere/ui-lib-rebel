@@ -1,6 +1,6 @@
 # Rebel UI Components
 
-A modern web components library based on Lit and Tailwind CSS for Quentin L.'s team.
+A modern web components library based on Lit and Tailwind CSS and Sass for Quentin L.'s team.
 
 ## Installation
 
