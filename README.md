@@ -1,6 +1,6 @@
 # Rebel UI Components
 
-A modern web components library based on Lit and Tailwind CSS and Sass for Quentin L.'s team.
+A modern web components library based on Lit and Tailwind CSS/Sass for Quentin L.'s team.
 
 ## Installation
 
@@ -70,21 +70,3 @@ This command:
 - Resolves all token references (e.g., `{core-font-family.body}`)
 - Generates CSS variables in `ui-lib/styles/variables.css`
 - Creates TypeScript types in `ui-lib/types/`
-
-## Import Alias
-
-The project includes a TypeScript path alias `@ui` for easier imports:
-
-```typescript
-// Instead of relative paths
-import { RebelButton } from "../../ui-lib/components/button/rebel-button";
-
-// Use the alias
-import { RebelButton } from "@ui/components/button/rebel-button";
-```
-
-This alias is configured in `tsconfig.json` and provides:
-
-- Shorter, more readable import paths
-- Better IDE autocompletion
-- Easier refactoring when moving files
