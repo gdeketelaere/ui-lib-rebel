@@ -1,2 +1,2 @@
-/* Import des variables CSS générées à partir des tokens */
 @import "./variables.css";
+@import "../../src/index.css";
