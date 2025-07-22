@@ -52,12 +52,8 @@ export class RebelInput extends TailwindElement(style) {
   @property({ type: String })
   errorText = "";
 
-  private inputElement?: HTMLInputElement;
-
   firstUpdated() {
-    this.inputElement = this.shadowRoot?.querySelector(
-      "input"
-    ) as HTMLInputElement;
+    // Init if needed - console.log('component initialised ! ')
   }
 
   private handleInput(e: Event) {

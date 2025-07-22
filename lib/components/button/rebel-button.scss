@@ -3,7 +3,7 @@
 }
 
 .button {
-  @apply border border-2;
+  @apply rounded-[var(--component-border-radius-button)];
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -18,45 +18,42 @@
 }
 
 .button--primary {
-  @apply bg-[--color-primary];
-  //background-color: var(--color-primary);
-  color: var(--color-primary-foreground);
+  background: var(--core-gradient-primary);
+  @apply text-[var(--color-core-primary-white)] transition-all duration-300 ease-in-out;
+  &:hover:not(:disabled) {
+    @apply bg-gradient-to-r from-[var(--color-core-red-rebel-400)] to-[var(--color-core-red-rebel-400)];
+  }
 }
 
-.button--primary:hover:not(:disabled) {
-  background-color: var(--bg-primary-600);
-  color: var(--color-primary-foreground);
-}
+
 
 .button--secondary {
-  background-color: var(--color-secondary);
-  color: var(--color-secondary-foreground);
+  @apply bg-[var(--color-core-secondary-dusk-grey)] text-[var(--color-core-neutral-900)];
+  &:hover:not(:disabled) {
+    @apply bg-[var(--core-neutral-50)] ;
+  }
 }
 
-.button--secondary:hover:not(:disabled) {
-  background-color: var(--color-secondary);
-  opacity: 0.5;
-}
 
 .button--outline {
   background-color: transparent;
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  color: var(--color-core-primary-rebel-red);
+  border: 1px solid var(--color-core-primary-rebel-red);
 }
 
 .button--outline:hover:not(:disabled) {
-  background-color: var(--bg-primary-50); /* Utilise primary-50 du config */
-  color: var(--bg-primary-900); /* Utilise primary-900 du config */
+  background-color: var(--color-core-neutral-50);
+  color: var(--color-core-neutral-900);
 }
 
 .button--ghost {
   background-color: transparent;
-  color: var(--color-foreground);
+  color: var(--color-core-neutral-900);
 }
 
 .button--ghost:hover:not(:disabled) {
-  background-color: var(--bg-primary-100); /* Utilise primary-100 du config */
-  color: var(--bg-primary-900); /* Utilise primary-900 du config */
+  background-color: var(--color-core-neutral-100);
+  color: var(--color-core-neutral-900);
 }
 
 .button:focus-visible {
@@ -66,7 +63,8 @@
 
 .button:disabled {
   cursor: not-allowed;
-  opacity: 0.6;
+  background:none;
+  @apply bg-[var(--core-neutral-400)] text-[var(--core-neutral-50)];
 }
 
 /* Sizes */

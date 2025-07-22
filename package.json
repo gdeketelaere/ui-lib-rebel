@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "vite ",
-    "build": "tsc && vite build",
+    "build": "npm run tokens && tsc && vite build",
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -25,7 +25,8 @@
     "lint": "eslint . --ext .ts,.js",
     "lint:fix": "eslint . --ext .ts,.js --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "codegen": "node scripts/generate-tokens.js"
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
@@ -43,6 +44,7 @@
     "@storybook/web-components-vite": "^9.0.17",
     "@tailwindcss/postcss": "^4.0.0",
     "@testing-library/jest-dom": "^6.6.3",
+    "@tokens-studio/sd-transforms": "^2.0.1",
     "@types/jest": "^30.0.0",
     "@types/jest-axe": "^3.5.9",
     "@vitest/browser": "^3.2.4",
@@ -57,6 +59,8 @@
     "postcss": "^8.4.47",
     "prettier": "^3.6.2",
     "storybook": "^9.0.17",
+    "style-dictionary": "^5.0.1",
+    "style-dictionary-utils": "^4.1.0",
     "tailwindcss": "^3.3.2",
     "ts-jest": "^29.4.0",
     "typescript": "^5.6.3",

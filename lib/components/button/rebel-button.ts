@@ -30,7 +30,7 @@ export class RebelButton extends TailwindElement(style) {
 
   render() {
     const buttonClasses = [
-      "button inline-flex items-center justify-center gap-2 px-6 py-2 rounded-xl transition-all duration-200",
+      "button inline-flex items-center justify-center gap-2  transition-all duration-200",
       `button--${this.variant}`,
       `button--${this.size}`,
       this.loading ? "button--loading" : "",
