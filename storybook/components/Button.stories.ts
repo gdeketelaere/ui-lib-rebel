@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { html } from "lit";
 
 // Import the component
-import "../../lib/components/button/rebel-button";
+import "../../ui-lib/components/button/rebel-button";
 
 const meta: Meta = {
   title: "Atomic Components/Button",

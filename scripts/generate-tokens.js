@@ -129,7 +129,7 @@ const buildTokens = async () => {
         },
         transforms: ["name/kebab", "attribute/cti"],
         transformGroup: "css",
-        buildPath: path.resolve("./lib/styles/") + "/",
+        buildPath: path.resolve("./ui-lib/styles/") + "/",
         files: [
           {
             destination: "variables.css",
@@ -139,7 +139,7 @@ const buildTokens = async () => {
       },
       typescript: {
         transformGroup: "js",
-        buildPath: path.resolve("./lib/types/") + "/",
+        buildPath: path.resolve("./ui-lib/types/") + "/",
         files: [
           {
             destination: "css-variables.d.ts",
@@ -171,8 +171,8 @@ const buildTokens = async () => {
   await sd.buildAllPlatforms();
 
   console.log("✅ Youhou ! Tokens generated successfully");
-  console.log("📁 CSS: lib/styles/variables.css");
-  console.log("📁 TypeScript: lib/types/");
+  console.log("📁 CSS: ui-lib/styles/variables.css");
+  console.log("📁 TypeScript: ui-lib/types/");
 };
 
 await buildTokens();

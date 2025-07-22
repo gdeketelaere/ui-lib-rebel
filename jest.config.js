@@ -22,7 +22,11 @@ export default {
     "**/*.test.ts",
     "**/*.test.tsx",
   ],
-  collectCoverageFrom: ["lib/**/*.ts", "!lib/**/*.d.ts", "!lib/**/index.ts"],
+  collectCoverageFrom: [
+    "ui-lib/**/*.ts",
+    "!ui-lib/**/*.d.ts",
+    "!ui-lib/**/index.ts",
+  ],
   coverageDirectory: "coverage",
   coverageReporters: ["text", "lcov", "html"],
   transformIgnorePatterns: [

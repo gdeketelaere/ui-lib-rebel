@@ -1,5 +1,5 @@
 {
-  "name": "My Rebel UI Lib Components",
+  "name": "rebel-ui-lib-components",
   "version": "0.0.1",
   "type": "module",
   "files": [
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "vite ",
-    "build": "npm run tokens && tsc && vite build",
+    "build": "npm run codegen && tsc && vite build",
     "preview": "vite preview",
     "test": "jest",
     "test:watch": "jest --watch",

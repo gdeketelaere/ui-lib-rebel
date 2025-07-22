@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import { html } from "lit";
 
 // Import the component
-import "../../lib/components/input/rebel-input";
+import "../../ui-lib/components/input/rebel-input";
 
 const meta: Meta = {
   title: "Atomic Components/Input",
