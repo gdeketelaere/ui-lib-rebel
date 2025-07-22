@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: rebel-ui-lib-storybook
+    buildCommand: npm install && npm run build-storybook
+    staticPublishPath: ./storybook-static 

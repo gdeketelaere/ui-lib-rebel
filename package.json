@@ -29,7 +29,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "codegen": "node scripts/generate-tokens.js",
-    "deploy": "./scripts/deploy.sh"
+    "deploy": "./scripts/deploy.sh",
+    "setup-render": "./scripts/setup-render.sh"
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
