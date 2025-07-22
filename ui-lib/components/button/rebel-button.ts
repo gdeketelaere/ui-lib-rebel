@@ -2,7 +2,7 @@ import { html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import style from "./rebel-button.scss?inline";
 import { TailwindElement } from "../../utils/tailwindElement";
-
+import "../../styles/variables.css";
 export interface RebelButtonProps {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "small" | "medium" | "large";

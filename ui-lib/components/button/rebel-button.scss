@@ -1,3 +1,4 @@
+
 :host {
   display: block;
 }
@@ -19,16 +20,16 @@
 
 .button--primary {
   background: var(--core-gradient-primary);
-  @apply text-[var(--color-core-primary-white)] transition-all duration-300 ease-in-out;
+  @apply text-[var(--core-primary-white)] transition-all duration-300 ease-in-out;
   &:hover:not(:disabled) {
-    @apply bg-gradient-to-r from-[var(--color-core-red-rebel-400)] to-[var(--color-core-red-rebel-400)];
+    @apply bg-gradient-to-r from-[var(--core-red-rebel-400)] to-[var(--core-red-rebel-400)];
   }
 }
 
 
 
 .button--secondary {
-  @apply bg-[var(--color-core-secondary-dusk-grey)] text-[var(--color-core-neutral-900)];
+  @apply bg-[var(--core-secondary-dusk-grey)] text-[var(--core-neutral-900)];
   &:hover:not(:disabled) {
     @apply bg-[var(--core-neutral-50)] ;
   }
@@ -37,23 +38,23 @@
 
 .button--outline {
   background-color: transparent;
-  color: var(--color-core-primary-rebel-red);
-  border: 1px solid var(--color-core-primary-rebel-red);
+  color: var(--core-primary-rebel-red);
+  border: 1px solid var(--core-primary-rebel-red);
 }
 
 .button--outline:hover:not(:disabled) {
-  background-color: var(--color-core-neutral-50);
-  color: var(--color-core-neutral-900);
+  background-color: var(--core-neutral-50);
+  color: var(--core-neutral-900);
 }
 
 .button--ghost {
   background-color: transparent;
-  color: var(--color-core-neutral-900);
+  color: var(--core-neutral-900);
 }
 
 .button--ghost:hover:not(:disabled) {
-  background-color: var(--color-core-neutral-100);
-  color: var(--color-core-neutral-900);
+  background-color: var(--core-neutral-100);
+  color: var(--core-neutral-900);
 }
 
 .button:focus-visible {
