@@ -46,14 +46,14 @@ export class RebelInput extends TailwindElement(style) {
   @property({ type: String })
   label = "";
 
-  @property({ type: String })
+  @property({ type: String, attribute: "helper-text" })
   helperText = "";
 
-  @property({ type: String })
+  @property({ type: String, attribute: "error-text" })
   errorText = "";
 
   firstUpdated() {
-    // Init if needed - console.log('component initialised ! ')
+    console.log("RebelInput firstUpdated:");
   }
 
   private handleInput(e: Event) {
@@ -121,11 +121,11 @@ export class RebelInput extends TailwindElement(style) {
           />
         </div>
 
-        ${this.errorText
+        ${this.errorText && this.errorText.trim() !== ""
           ? html`
               <div class="error-text" id="helper-text">${this.errorText}</div>
             `
-          : this.helperText
+          : this.helperText && this.helperText.trim() !== ""
             ? html`
                 <div class="helper-text" id="helper-text">
                   ${this.helperText}

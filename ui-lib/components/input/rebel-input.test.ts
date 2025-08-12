@@ -102,4 +102,48 @@ describe("RebelInput Test", () => {
     expect(element.required).toBe(true);
     expect(element.disabled).toBe(false);
   });
+
+  it("renders error text when errorText is set", async () => {
+    element.errorText = "This is an error message";
+    element.requestUpdate();
+    await element.updateComplete;
+
+    const errorTextElement = element.shadowRoot?.querySelector(".error-text");
+    expect(errorTextElement).toBeDefined();
+    expect(errorTextElement?.textContent?.trim()).toBe(
+      "This is an error message"
+    );
+  });
+
+  it("renders helper text when helperText is set", async () => {
+    element.helperText = "This is a helper message";
+    element.requestUpdate();
+    await element.updateComplete;
+
+    const helperTextElement = element.shadowRoot?.querySelector(".helper-text");
+    expect(helperTextElement).toBeDefined();
+    expect(helperTextElement?.textContent?.trim()).toBe(
+      "This is a helper message"
+    );
+  });
+
+  it("does not render error text when errorText is empty", async () => {
+    element.errorText = "";
+    element.requestUpdate();
+    await element.updateComplete;
+
+    const errorTextElement = element.shadowRoot?.querySelector(".error-text");
+    expect(errorTextElement).toBeNull();
+  });
+
+  it("shows error styling when variant is error", async () => {
+    element.variant = "error";
+    element.requestUpdate();
+    await element.updateComplete;
+
+    const inputElement = element.shadowRoot?.querySelector(
+      ".input"
+    ) as HTMLElement;
+    expect(inputElement?.classList.contains("input--error")).toBe(true);
+  });
 });
